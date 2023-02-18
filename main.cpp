@@ -35,15 +35,6 @@ class FileTeste{
 		}
 };
 
-void readFile(string filePath){
-	string linha;
-	ifstream MyReadFile(filePath);
-	while(getline(MyReadFile, linha)){
-		cout << linha;
-	}
-	MyReadFile.close();
-}
-
 int main(int argc, char* argv[]){
 	if (strcmp(argv[1], "-help") == 0 || strcmp(argv[1], "-h") == 0){
 		cout << "Usage:\n\t ./file mode file-name \"Input Data\"\n\nExamples: \n\tAPPEND:\t./file append tryout.txt \"Lorem ipsum dolor sit amet.\"\n\tWRITE:\t../file write tryout.txt \"Lorem ipsum dolor sit amet.\"\n\tREAD:\t./file read tryout.txt" << endl;
